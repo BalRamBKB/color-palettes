@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<meta charset="UTF-8">
+<title>Color Palettes</title>
+<link rel="manifest" href="manifest.json">
+<meta name="mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="application-name" content="Color Palettes">
+<meta name="apple-mobile-web-app-title" content="Color Palettes">
+<meta name="theme-color" content="#13a036">
+<meta name="msapplication-navbutton-color" content="#13a036">
+<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+<meta name="msapplication-starturl" content="http://userinterface.epizy.com/color-palettes">
+<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+<link rel="icon" type="image/png" sizes="48x48" href="amazing-capture.png">
+<link rel="apple-touch-icon" type="image/png" sizes="48x48" href="amazing-capture.png">
+<link rel="icon" type="image/png" sizes="96x96" href="amazing-capture.png">
+<link rel="apple-touch-icon" type="image/png" sizes="96x96" href="amazing-capture.png">
+<link rel="icon" type="image/png" sizes="192x192" href="amazing-capture.png">
+<link rel="apple-touch-icon" type="image/png" sizes="192x192" href="amazing-capture.png">
+<meta name="description" content="Color Palettes">
+<meta name="keywords" content="Color Palettes, Color Scheme">
+<meta name="author" content="BalRam BKB">
+<link rel="stylesheet" href="css/color-palettes.css">
+</head>
+<body>
+<header class="color-blue-5">
+<h2>Color Palettes</h2>
+</header>
+<div class="color-palettes"> </div>
+<footer class="page-footer color-black-7">
+<div class="footer-copyright">
+<div>
+<b>Design &amp; Developed by BalRam (BKB)</b>
+</div>
+</div>
+</footer>
+<script src="js/jquery-1.11.1.min.js"></script>
+<script src="js/jquery-ui.1.10.4.min.js"></script>
+<script src="js/color-palettes.js"></script>
+<script>
+$(document).ready(function(){
+   
+   createDiv();
+   getSetColor();
+
+  $(".colorgroup").click(function() {
+    if(jQuery(this).find('>.palettes').css("display")=="none"){
+        $(this).find('>.palettes').show("clip", {direction: "vertical"}, 1000);
+    }else{
+        $(this).find('>.palettes').hide("clip", {direction: "vertical"}, 1000);
+    }   
+});
+
+});
+
+</script>
+</body>
+</html>

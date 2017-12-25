@@ -1,0 +1,5 @@
+var color='';function hexc(colorval){var parts=colorval.match(/^rgb\((\d+),\s*(\d+),\s*(\d+)\)$/);delete(parts[0]);for(var i=1;i<=3;++i){parts[i]=parseInt(parts[i]).toString(16);if(parts[i].length==1)parts[i]='0'+parts[i];}
+color='#'+parts.join('');return color;}
+function getSetColor(){$('.color-palettes .palettes').each(function(){var hexcolor=$(this).css('backgroundColor');hexc(hexcolor);$(this).text(color);});}
+var arr=['red','maroon','green','lime','yellow','olive','blue','navy','aqua','teal','fuchsia','purple','white','silver','gray','black'];function createDiv(){$.each(arr,function(key,value){for(i=0;i<=10;i++){var e=$(".color-palettes").append("<div class='palettes color-"+value+"-"+i+"'></div>");}
+var divs=$(".color-palettes > .palettes");for(var i=0;i<divs.length;i+=11){divs.slice(i,i+11).wrapAll("<div class='colorgroup color-"+value+"-"+i+"'></div>");}});}
